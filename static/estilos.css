@@ -1,0 +1,440 @@
+
+
+.recuadro {
+    background-image: linear-gradient(155deg, #a46cdf 0, #60479f 25%, #1f1f59 50%, #00001b 75%, #000000 100%);
+    margin: 0;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+    background-image: linear-gradient(155deg, #9560cd 0, #60479f 25%, #23235e 77%, #00001b 90%, rgb(0, 0, 0) 100%);
+  
+ 
+}
+
+.notch {
+    padding: 3%;
+}
+
+.notch2 {
+    padding: 1.5%;
+}
+
+#texto {
+    color: white;
+    font-family: "Arial-Black";
+}
+
+/* Estilos para las opciones del menú */
+.navbar-nav .nav-item a {
+    color: white !important;
+    /* Color de texto blanco */
+}
+
+/* Estilos para las opciones del menú al pasar el mouse sobre ellas */
+.navbar-nav .nav-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Efecto de sombreado al pasar el mouse */
+    background-color: white;
+    border-radius: 30px;
+    /* Fondo blanco al pasar el mouse */
+}
+
+.navbar-nav .nav-item:hover a {
+    color: black !important;
+    /* Color de texto negro al pasar el mouse */
+}
+
+.mensaje-inicial {
+    padding: 2%;
+    width: 80%;
+    margin-top: 8%;
+    text-align: center;
+
+
+}
+
+/* Nuevos estilos para la barra de navegación */
+.navbar {
+    width: 100%;
+    margin: 0;
+}
+
+.navbar-toggler {
+    margin: 0;
+}
+
+
+.glow-on-hover {
+    margin-top: 3%;
+    height: 3%;
+    width: 15%; /* Ajusta según tus necesidades */
+    border: none;
+    outline: none;
+    color: #000000;
+    background: #8f8a8a;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* Media query para ajustar el tamaño en pantallas más pequeñas */
+@media (max-width: 600px) {
+    .glow-on-hover {
+        height: 3%;
+        width: 40%;
+        font-size: 18px; /* Ajusta según tus necesidades */
+    }
+    .mensaje-inicial{
+        margin-top: 30%;
+    }
+}
+
+@media (max-height: 800px) {
+    .glow-on-hover {
+        height: 3%;
+        width: 40%;
+        font-size: 18px; /* Ajusta según tus necesidades */
+    }
+    .mensaje-inicial{
+        margin-top: 5%;
+    }
+}
+
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, rgb(123, 1, 157), #b7adad, #000000,#9b10ff, #b7adad, #000000,  rgb(146, 3, 185), #b7adad, #000000,#9402fd, #b7adad, #000000,  rgb(93, 0, 118), #b7adad, #000000,#4a027d, #b7adad, #000000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(255, 255, 255)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 400% 0;
+  }
+
+  100% {
+      background-position: 0 0;
+  }
+}
+
+
+.ag-format-container {
+    width: 1142px;
+    margin: 0 auto;
+  }
+  
+  .ag-courses_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  
+    padding: 50px 0;
+  }
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 30px);
+  
+    margin: 0 15px 30px;
+  
+    overflow: hidden;
+  
+    border-radius: 28px;
+  }
+  .ag-courses-item_link {
+    display: block;
+    padding: 30px 20px;
+    background-color: #000000;
+
+  
+    overflow: hidden;
+  
+    position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date{
+    text-decoration: none;
+    color: #ff0000;
+  }
+  .ag-courses-item_link:hover .ag-courses-item_bg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(10);
+  }
+  .ag-courses-item_title {
+    min-height: 87px;
+    margin: 0 0 25px;
+  
+    overflow: hidden;
+  
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF;
+  
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_date-box {
+    font-size: 18px;
+    color: #ffffff;
+  
+    z-index: 2;
+    position: relative;
+  }
+  .ag-courses-item_date {
+    font-weight: bold;
+    color: #f9b234;
+  
+    -webkit-transition: color .5s ease;
+    -o-transition: color .5s ease;
+    transition: color .5s ease
+  }
+  .ag-courses-item_bg {
+    height: 128px;
+    width: 128px;
+    background-color: #48008f;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+    background-color: #48008f;
+  }
+  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+    background-color: #48008f;
+  }
+  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+    background-color: #48008f;
+  }
+  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+    background-color:#48008f;
+  }
+  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+    background-color: #48008f;
+  }
+  
+  
+  
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
+
+.ag-courses-item_link,
+.ag-courses-item_link:visited {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Utiliza el color heredado para el texto */
+}
+
+/* Añade el color deseado para el enlace cuando está enfocado o al pasar el mouse */
+.ag-courses-item_link:hover,
+.ag-courses-item_link:focus {
+    color: #FFF; /* Color deseado al pasar el mouse o enfocar */
+}
+
+#fondo{
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+    background-position: center;
+    
+  }
+
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated-image {
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+}
+
+.show {
+    animation: fadeIn 1s ease-in-out; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+    opacity: 1;
+}
+
+.animated-image3 {
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+}
+
+.show3 {
+    animation: fadeIn 1s ease-in-out; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+    opacity: 1;
+}
+
+
+
+@keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+.zoomable-image {
+    transition: transform 0.5s; /* Agrega una transición suave para evitar cambios bruscos */
+}
+
+.zoomable-image:hover {
+    animation: zoomIn 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn2 {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated-image2 {
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+}
+
+.show2 {
+    animation: fadeIn 1s ease-in-out; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+    opacity: 1;
+}
+
+
+
+  #scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a1575;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px; /* Ajusta el padding para cambiar el tamaño del botón */
+    width: 60px; /* Ajusta la anchura del botón según tus preferencias */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  
+  }
+  
+  #scroll-to-top-btn:hover {
+    opacity: 1;
+    transform: scale(1.3); 
+  }
+  
+  /* Ocultar el botón por defecto */
+  .hidden {
+    display: none;
+  }
+
+  /* styles.css */
+
+.pagina {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pagina-visible {
+    opacity: 1;
+}
+
+
+.cuadro{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    margin-top: 5%;
+    padding: 2%;
+}
