@@ -1,13 +1,22 @@
-from flask import Flask, jsonify
-import os
+from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(__name__)
-
+app  = Flask(__name__)
 
 @app.route('/')
 def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+    return render_template('index.html')
 
+# @app.route('/Personas')
+# def Personas():
+#     return render_template('personas.html')
+
+@app.route('/Conoceme')
+def Conoceme():
+    return render_template('conoceme.html')
+
+@app.route('/Contactame')
+def Contactame():
+    return render_template('contactame.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(debug=True)
